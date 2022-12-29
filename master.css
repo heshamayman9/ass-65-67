@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+.one {
+  background-color: #eee;
+  margin: 30px auto;
+  text-transform: capitalize;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  color: #03a9f4;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 30px;
+  position: relative;
+}
+.one::before {
+  content: "";
+  position: absolute;
+  background-color: #03a9f4;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-5deg);
+  z-index: -1;
+}
+.one::after {
+  content: "";
+  position: absolute;
+  background-color: #e91e63;
+  width: 100%;
+  height: 100%;
+  transform: rotate(5deg);
+  z-index: -3;
+}
+.two {
+  background-color: #eee;
+  margin: 30px auto;
+  text-transform: capitalize;
+  width: 200px;
+  height: 200px;
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+  position: relative;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.two::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border: 10px solid;
+  border-radius: 50%;
+  border-color: #e91e63 #e91e63 #e91e63 transparent;
+  transition: 0.5s;
+}
+.two::after {
+  content: "";
+  position: absolute;
+  height: 220px;
+  width: 220px;
+  border: 10px solid;
+  border-radius: 50%;
+  border-color: #03a9f4 transparent #03a9f4 #03a9f4;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+.two:hover::before {
+  transform: rotate(1turn);
+}
+.two:hover::after {
+  transform: rotate(1turn);
+}
